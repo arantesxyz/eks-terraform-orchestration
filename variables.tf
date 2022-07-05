@@ -20,14 +20,14 @@ variable "k8s_version" {
 
 variable "nodes_instances_sizes" {
   default = [
-      "t3.large"
+      "t3.medium"
   ]
 }
 
 variable "auto_scale_options" {
   default = {
     min = 2
-    max = 10
+    max = 4
     desired = 2
   }
 }

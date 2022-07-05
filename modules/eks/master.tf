@@ -10,9 +10,9 @@ resource "aws_eks_cluster" "eks_cluster" {
     ]
   }
 
-  tags = map(
-    "kubernetes.io/cluster/${var.cluster_name}", "shared"
-  )
+  tags = tomap({
+    "kubernetes.io/cluster/${var.cluster_name}" = "shared"
+  })
 
 }
 
